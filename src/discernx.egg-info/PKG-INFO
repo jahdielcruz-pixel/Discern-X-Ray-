@@ -21,23 +21,38 @@ pip install -e .
 
 ## Usage
 
-Run the CLI:
-
-```bash
-discernx
-```
-
 Analyze text for risk signals:
 
 ```bash
-discernx --text "Your text here"
+discernx analyze --text "Your text here"
 ```
 
-Specify output format (json or markdown):
+Read from a file:
 
 ```bash
-discernx --text "Your text here" --format markdown
+discernx analyze --file path/to/file.txt
 ```
+
+Pipe from stdin:
+
+```bash
+echo "Some text" | discernx analyze
+```
+
+Specify output format (md or json, default md):
+
+```bash
+discernx analyze --text "Text" --format json
+```
+
+Write output to a file:
+
+```bash
+discernx analyze --text "Text" --out report.md
+```
+
+Options:
+- `--max-claims`: Limit the number of claims to analyze (default 12)
 
 Example markdown output:
 
@@ -52,17 +67,6 @@ Example markdown output:
 
 Signals: `sensational_language`, `very_short`
 
-### Claim 2 — Risk 25/100
-> They don't want you to know this secret.
-
-Signals: `sensational_language`
-
 ## Notes
 - MVP heuristics only (not fact-checking).
 - ...
-
-Check version:
-
-```bash
-discernx --version
-```
