@@ -33,16 +33,33 @@ Analyze text for risk signals:
 discernx --text "Your text here"
 ```
 
-Example output (JSON):
+Specify output format (json or markdown):
 
-```json
-{
-  "input_text": "This is shocking news! They don't want you to know this secret.",
-  "overall_risk": 25,
-  "notes": [...],
-  "claims": [...]
-}
+```bash
+discernx --text "Your text here" --format markdown
 ```
+
+Example markdown output:
+
+# Discern-X-Ray Report
+
+**Overall Risk Score:** 30/100
+
+## Claims
+
+### Claim 1 — Risk 35/100
+> This is shocking news!
+
+Signals: `sensational_language`, `very_short`
+
+### Claim 2 — Risk 25/100
+> They don't want you to know this secret.
+
+Signals: `sensational_language`
+
+## Notes
+- MVP heuristics only (not fact-checking).
+- ...
 
 Check version:
 
