@@ -20,7 +20,24 @@ Run the CLI:
 discernx
 ```
 
-Or check version:
+Analyze text for risk signals:
+
+```bash
+discernx --text "Your text here"
+```
+
+Example output (JSON):
+
+```json
+{
+  "input_text": "This is shocking news! They don't want you to know this secret.",
+  "overall_risk": 25,
+  "notes": [...],
+  "claims": [...]
+}
+```
+
+Check version:
 
 ```bash
 discernx --version
