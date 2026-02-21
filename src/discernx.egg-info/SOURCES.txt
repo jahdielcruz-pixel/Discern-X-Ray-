@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/discernx/__init__.py
+src/discernx.egg-info/PKG-INFO
+src/discernx.egg-info/SOURCES.txt
+src/discernx.egg-info/dependency_links.txt
+src/discernx.egg-info/entry_points.txt
+src/discernx.egg-info/top_level.txt
+src/discernx/cli/__init__.py
+src/discernx/cli/main.py

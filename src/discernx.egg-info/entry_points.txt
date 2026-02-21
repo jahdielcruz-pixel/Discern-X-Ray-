@@ -1,0 +1,2 @@
+[console_scripts]
+discernx = discernx.cli.main:main

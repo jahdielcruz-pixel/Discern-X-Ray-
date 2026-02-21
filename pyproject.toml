@@ -1,0 +1,16 @@
+[project]
+name = "discernx"
+version = "0.1.0"
+description = "Discern-X-Ray CLI proof of concept"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+discernx = "discernx.cli.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
